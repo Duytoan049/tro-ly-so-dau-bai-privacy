@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chính sách quyền riêng tư của tiện ích Trợ lý Sổ đầu bài và Nhận xét học sinh.">
+  <title>Chính sách quyền riêng tư — Trợ lý Sổ đầu bài</title>
+  <style>
+    :root{color-scheme:light;--ink:#172033;--muted:#526077;--blue:#174ea6;--line:#dbe3ef;--panel:#f5f8fc}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f2f5fa;color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+    main{width:min(900px,calc(100% - 32px));margin:32px auto;padding:clamp(22px,5vw,48px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 30px #17203312}
+    header{padding-bottom:22px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:64px;height:64px;object-fit:contain;border-radius:14px}
+    h1{margin:0;font-size:clamp(24px,4vw,34px);line-height:1.2}
+    .subtitle{margin:8px 0 0;color:var(--muted)}
+    .notice{margin-top:22px;padding:14px 16px;border-left:4px solid var(--blue);background:var(--panel);color:#24334c}
+    h2{margin:32px 0 10px;font-size:22px}
+    h3{margin:22px 0 6px;font-size:18px}
+    p{margin:8px 0}
+    ul{padding-left:24px}
+    li{margin:5px 0}
+    a{color:var(--blue);overflow-wrap:anywhere}
+    .contact{margin-top:28px;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+    footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+    @media(max-width:520px){main{width:100%;margin:0;border-radius:0;border-left:0;border-right:0}.brand img{width:52px;height:52px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="Logo Trợ lý Sổ đầu bài và Nhận xét học sinh">
+      <div>
+        <h1>Chính sách quyền riêng tư</h1>
+        <p class="subtitle">Trợ lý Sổ đầu bài &amp; Nhận xét học sinh · Có hiệu lực từ 21/10/2026</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="notice">
+    Tiện ích hỗ trợ giáo viên thao tác trên trang VnEdu theo yêu cầu của giáo viên. Nội dung điểm, xếp loại và nhận xét của học sinh được xử lý trong trình duyệt trên trang VnEdu; tiện ích không gửi nội dung đó tới máy chủ bản quyền.
+  </div>
+
+  <section lang="vi">
+    <h2>Tiếng Việt</h2>
+
+    <h3>1. Phạm vi và đơn vị vận hành</h3>
+    <p>Chính sách này áp dụng cho tiện ích trình duyệt “Trợ lý Sổ đầu bài &amp; Nhận xét học sinh” (“Tiện ích”). Đơn vị vận hành là nhà phát triển tiện ích. Kênh hỗ trợ: <a href="https://zalo.me/0971920209" target="_blank" rel="noopener noreferrer">Zalo 0971920209</a>.</p>
+
+    <h3>2. Dữ liệu được xử lý trên thiết bị</h3>
+    <ul>
+      <li>Khi giáo viên chủ động dùng chức năng điền, Tiện ích đọc các trường điểm, xếp loại, mã dòng/học sinh và ô nhận xét cần thiết trên bảng VnEdu đang mở để ghép đúng hàng và điền nội dung.</li>
+      <li>Mẫu nhận xét, môn học tùy chỉnh, ngưỡng điểm, tùy chọn và trạng thái bản quyền được lưu trong bộ nhớ cục bộ của trình duyệt bằng Chrome Storage.</li>
+      <li>Nội dung học sinh được xử lý trong trang VnEdu trên thiết bị của người dùng; Tiện ích không gửi điểm, xếp loại, tên học sinh hoặc nội dung nhận xét đến dịch vụ bản quyền.</li>
+    </ul>
+
+    <h3>3. Dữ liệu bản quyền gửi tới máy chủ</h3>
+    <p>Để kích hoạt và kiểm tra bản quyền, Tiện ích gửi yêu cầu HTTPS tới Google Apps Script do nhà phát triển cấu hình. Yêu cầu có thể gồm:</p>
+    <ul>
+      <li>Key bản quyền, mã cài đặt ngẫu nhiên của trình duyệt, mã chức năng cần xác thực, loại thao tác (kích hoạt/kiểm tra) và phiên bản Tiện ích.</li>
+      <li>Máy chủ lưu hash SHA-256 của key thay vì key đầy đủ, phần gợi nhớ key, mã thiết bị, trạng thái, thời điểm tạo/kích hoạt/kiểm tra/gia hạn, chức năng được cấp và thông tin ghi chú/khách hàng do quản trị viên nhập.</li>
+    </ul>
+    <p>Key và mã cài đặt được gửi qua HTTPS để xác thực. Google có thể xử lý dữ liệu kỹ thuật của yêu cầu theo chính sách dịch vụ của Google. Nhà phát triển không dùng dữ liệu bản quyền để theo dõi lịch sử duyệt web hoặc quảng cáo.</p>
+
+    <h3>4. Thanh toán và thông tin liên hệ</h3>
+    <p>Tiện ích hiển thị thông tin tài khoản nhận chuyển khoản và hướng dẫn người mua tự nhập số điện thoại làm nội dung chuyển khoản. Tiện ích không nhận thông tin đăng nhập ngân hàng, số thẻ hoặc thông tin thanh toán từ ứng dụng ngân hàng. Nếu quản trị viên ghi số điện thoại người mua vào ghi chú quản lý key, thông tin đó được lưu trong bảng quản trị bản quyền để đối soát và hỗ trợ.</p>
+
+    <h3>5. Mục đích sử dụng và chia sẻ</h3>
+    <p>Dữ liệu chỉ được dùng để cung cấp chức năng điền do giáo viên yêu cầu, lưu tùy chỉnh cục bộ, xác thực/gia hạn bản quyền, hỗ trợ người dùng và bảo vệ hệ thống khỏi lạm dụng. Nhà phát triển không bán dữ liệu. Dữ liệu xác thực được xử lý qua Google Apps Script/Google Sheets theo cấu hình của hệ thống bản quyền; dữ liệu trên trang VnEdu không được gửi tới các dịch vụ này.</p>
+
+    <h3>6. Lưu giữ, bảo mật và xóa dữ liệu</h3>
+    <p>Dữ liệu cục bộ được giữ trong trình duyệt cho tới khi người dùng xóa dữ liệu Tiện ích hoặc gỡ Tiện ích. Bản ghi bản quyền và nhật ký quản trị được giữ trong bảng quản lý cho tới khi quản trị viên xóa theo quy trình vận hành. Nhà phát triển áp dụng HTTPS cho trao đổi với máy chủ bản quyền và hạn chế quyền truy cập bảng quản trị. Người dùng có thể liên hệ qua Zalo để yêu cầu hỗ trợ về dữ liệu bản quyền hoặc đề nghị xóa bản ghi liên quan; việc xóa có thể bị giới hạn nếu cần lưu hồ sơ giao dịch hoặc bảo vệ hệ thống.</p>
+
+    <h3>7. Trẻ em và trách nhiệm của người dùng</h3>
+    <p>Tiện ích là công cụ dành cho giáo viên, không hướng trực tiếp tới trẻ em. Giáo viên cần sử dụng dữ liệu học sinh theo quyền hạn, quy định của nhà trường và pháp luật hiện hành, đồng thời kiểm tra nội dung trước khi lưu lên VnEdu.</p>
+
+    <h3>8. Thay đổi chính sách</h3>
+    <p>Chính sách có thể được cập nhật khi Tiện ích hoặc quy định liên quan thay đổi. Bản mới sẽ được đăng tại cùng địa chỉ trang này và ghi ngày hiệu lực mới.</p>
+  </section>
+
+  <section lang="en">
+    <h2>English</h2>
+
+    <h3>1. Scope and operator</h3>
+    <p>This policy applies to the “Lesson Book Assistant &amp; Student Comments” browser extension (“the Extension”). It is operated by the Extension developer. Support is available via <a href="https://zalo.me/0971920209" target="_blank" rel="noopener noreferrer">Zalo 0971920209</a>.</p>
+
+    <h3>2. Data processed on the device</h3>
+    <ul>
+      <li>When a teacher initiates a fill action, the Extension reads the necessary score, rating, row/student identifier, and comment fields from the currently open VnEdu table to match rows and fill content.</li>
+      <li>Comment templates, custom subjects, score thresholds, preferences, and license status are stored locally in the browser using Chrome Storage.</li>
+      <li>Student content is processed in the user's browser on the VnEdu page. The Extension does not send student scores, ratings, names, or comments to the licensing service.</li>
+    </ul>
+
+    <h3>3. Data sent to the licensing service</h3>
+    <p>To activate and validate a license, the Extension sends HTTPS requests to Google Apps Script configured by the developer. Requests may include the license key, a random browser installation identifier, the requested feature code, the operation (activation/validation), and the Extension version.</p>
+    <p>The licensing backend stores a SHA-256 hash of the key rather than the full key, a key hint, device identifier, status, creation/activation/validation/renewal times, licensed product, and customer or note details entered by the administrator. Google may process technical request data under its own service policies. Licensing data is not used by the developer for browsing-history tracking or advertising.</p>
+
+    <h3>4. Payments and contact information</h3>
+    <p>The Extension displays bank transfer instructions and asks buyers to enter their own phone number as the transfer reference. It does not receive bank login credentials, card numbers, or payment details from a banking app. If an administrator records a buyer's phone number in a license note, that information is stored in the license administration sheet for reconciliation and support.</p>
+
+    <h3>5. Use and sharing</h3>
+    <p>Data is used to provide teacher-initiated filling features, store local preferences, validate or renew licenses, support users, and protect the service from abuse. The developer does not sell data. License data is processed through Google Apps Script/Google Sheets configured for the licensing system; VnEdu page content is not sent to these services.</p>
+
+    <h3>6. Retention, security, and deletion</h3>
+    <p>Local data remains in the browser until the user clears the Extension's data or removes the Extension. License records and administrative logs remain in the licensing sheet until removed by the administrator under the operational process. HTTPS is used for communication with the licensing service, and access to the administration sheet is restricted. Users may contact support to request assistance with or deletion of a license record. Deletion may be limited when records need to be retained for transaction records or service protection.</p>
+
+    <h3>7. Children and user responsibility</h3>
+    <p>The Extension is a tool for teachers and is not directed to children. Teachers must use student data only as authorized by their school and applicable law, and should review content before saving it to VnEdu.</p>
+
+    <h3>8. Policy changes</h3>
+    <p>This policy may change when the Extension or applicable requirements change. Updates will be posted at this same URL with a revised effective date.</p>
+  </section>
+
+  <div class="contact">
+    <strong>Liên hệ / Contact</strong>
+    <p>Hỗ trợ quyền riêng tư và bản quyền / Privacy and licensing support: <a href="https://zalo.me/0971920209" target="_blank" rel="noopener noreferrer">Zalo 0971920209</a>.</p>
+  </div>
+  <footer>Ngày hiệu lực / Effective date: 21 October 2026.</footer>
+</main>
+</body>
+</html>
