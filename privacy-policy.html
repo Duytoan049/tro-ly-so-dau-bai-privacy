@@ -57,12 +57,12 @@
     </ul>
 
     <h3>3. Dữ liệu bản quyền gửi tới máy chủ</h3>
-    <p>Để kích hoạt và kiểm tra bản quyền, Tiện ích gửi yêu cầu HTTPS tới Google Apps Script do nhà phát triển cấu hình. Yêu cầu có thể gồm:</p>
+    <p>Để kích hoạt và kiểm tra bản quyền, Tiện ích gửi yêu cầu HTTPS dạng POST tới Google Apps Script do nhà phát triển cấu hình. Key và mã cài đặt nằm trong phần thân yêu cầu, không đặt trong địa chỉ URL. Yêu cầu có thể gồm:</p>
     <ul>
       <li>Key bản quyền, mã cài đặt ngẫu nhiên của trình duyệt, mã chức năng cần xác thực, loại thao tác (kích hoạt/kiểm tra) và phiên bản Tiện ích.</li>
       <li>Máy chủ lưu hash SHA-256 của key thay vì key đầy đủ, phần gợi nhớ key, mã thiết bị, trạng thái, thời điểm tạo/kích hoạt/kiểm tra/gia hạn, chức năng được cấp và thông tin ghi chú/khách hàng do quản trị viên nhập.</li>
     </ul>
-    <p>Key và mã cài đặt được gửi qua HTTPS để xác thực. Google có thể xử lý dữ liệu kỹ thuật của yêu cầu theo chính sách dịch vụ của Google. Nhà phát triển không dùng dữ liệu bản quyền để theo dõi lịch sử duyệt web hoặc quảng cáo.</p>
+    <p>Key và mã cài đặt được gửi trong phần thân yêu cầu HTTPS để xác thực. Google có thể xử lý dữ liệu kỹ thuật của yêu cầu theo chính sách dịch vụ của Google. Nhà phát triển không dùng dữ liệu bản quyền để theo dõi lịch sử duyệt web hoặc quảng cáo.</p>
 
     <h3>4. Thanh toán và thông tin liên hệ</h3>
     <p>Trang đặt mua thu thập email cùng mã đơn, gói, số tiền và trạng thái đối soát. Dữ liệu đơn được lưu trong tab Orders của Google Sheets để quản trị viên kiểm tra giao dịch và gửi key; email cũng được dùng để gửi thông tin thanh toán và key. Ảnh QR động được tạo qua dịch vụ VietQR/SePay bằng thông tin tài khoản nhận, số tiền và mã đơn.</p>
@@ -97,7 +97,7 @@
     </ul>
 
     <h3>3. Data sent to the licensing service</h3>
-    <p>To activate and validate a license, the Extension sends HTTPS requests to Google Apps Script configured by the developer. Requests may include the license key, a random browser installation identifier, the requested feature code, the operation (activation/validation), and the Extension version.</p>
+    <p>To activate and validate a license, the Extension sends HTTPS POST requests to Google Apps Script configured by the developer. The license key and installation identifier are placed in the request body, not in the URL. Requests may include the license key, a random browser installation identifier, the requested feature code, the operation (activation/validation), and the Extension version.</p>
     <p>The licensing backend stores a SHA-256 hash of the key rather than the full key, a key hint, device identifier, status, creation/activation/validation/renewal times, licensed product, and customer or note details entered by the administrator. Google may process technical request data under its own service policies. Licensing data is not used by the developer for browsing-history tracking or advertising.</p>
 
     <h3>4. Payments and contact information</h3>
